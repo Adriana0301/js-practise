@@ -20,7 +20,6 @@
 // console.log(getMinute(35));
 // console.log(getMinute(115));
 
-
 //~ Змінна num може набувати 4 значення: 1, 2, 3 або 4. Якщо вона має
 //~ значення '1', то у змінну result запишемо 'зима', якщо має значення
 //~ '2' - 'весна' і так далі. Розв'яжіть завдання через switch-case.
@@ -38,16 +37,13 @@ function getSeasonByNumber() {
       break;
     case 3:
       result = "Літо";
-          break;
-      case 4:
+      break;
+    case 4:
       result = "Осінь";
       break;
     default:
-      result = "Ввели не вірне значення";
-      break;
+      result = "Невірне значення. Введіть число від 1 до 4.";
   }
-
-  return result;
 }
 
 // getSeasonByNumber();
@@ -57,17 +53,14 @@ function getSeasonByNumber() {
 //~ числа від max до min за спаданням
 //~ Додайте усі парні числа від min до max
 function logNumbers(min, max) {
-    let total = 0;
-    for (let i = max; i >= min; i -= 1) {
-        if (i % 2 === 0) {
-            total += i;
-            // console.log(i);
-            
-        }
-       //console.log(i);
-        
+  let total = 0;
+  for (let i = max; i >= min; i -= 1) {
+    if (i % 2 === 0) {
+      total += i;
+      // console.log(i);
     }
-    return total;
+    //console.log(i);
+  }
+  return total;
 }
 // console.log(logNumbers(10, 20));
-

@@ -20,7 +20,6 @@
 // console.log(getMinute(35));
 // console.log(getMinute(115));
 
-
 //~ Змінна num може набувати 4 значення: 1, 2, 3 або 4. Якщо вона має
 //~ значення '1', то у змінну result запишемо 'зима', якщо має значення
 //~ '2' - 'весна' і так далі. Розв'яжіть завдання через switch-case.
@@ -38,8 +37,8 @@ function getSeasonByNumber() {
       break;
     case 3:
       result = "Літо";
-          break;
-      case 4:
+      break;
+    case 4:
       result = "Осінь";
       break;
     default:
@@ -57,17 +56,46 @@ function getSeasonByNumber() {
 //~ числа від max до min за спаданням
 //~ Додайте усі парні числа від min до max
 function logNumbers(min, max) {
-    let total = 0;
-    for (let i = max; i >= min; i -= 1) {
-        if (i % 2 === 0) {
-            total += i;
-            // console.log(i);
-            
-        }
-       //console.log(i);
-        
+  let total = 0;
+  for (let i = max; i >= min; i -= 1) {
+    if (i % 2 === 0) {
+      total += i;
+      // console.log(i);
     }
-    return total;
+    //console.log(i);
+  }
+  return total;
 }
 // console.log(logNumbers(10, 20));
 
+//~Напишіть код, який запитуватиме
+//логін за допомогою prompt і логувати результат
+//в консоль браузера
+
+//Якщо відвідувач вводить "Адмін",
+//то prompt запитує пароль.
+//Якщо нічого не ввели або натиснута клавіша Esc
+//Вивести стороку "Скасовано"
+// Інакше вивести рядок "Я вас не знаю"
+
+//Пароль перевіряти так:
+//Якщо введено пароль "Я головний",
+//то вивести рядок "Добрий день!"
+//інакше виводити рядок "Невірний пароль!"
+
+// const userRule = prompt("Введіть логін");
+
+const userRule = prompt("Введіть логін");
+console.log(userRule);
+if (userRule === "Адмін") {
+  const userPassword = prompt("Введіть пароль");
+  if (!userPassword) {
+    console.log("Скасовано");
+  } else if (userPassword === "Я головний") {
+    console.log("Добрий день!");
+  } else {
+    console.log("Невірний пароль!");
+  }
+} else {
+  console.log("Я вас не знаю");
+}

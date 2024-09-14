@@ -74,5 +74,26 @@ function makeInvetedString(string) {
   return strNew;
 }
 
-console.log(makeInvetedString(`JavaScript`));
-console.log(makeInvetedString(`jAVAsCRIPT`))
+// console.log(makeInvetedString(`JavaScript`));
+// console.log(makeInvetedString(`jAVAsCRIPT`));
+
+//Напишіть функцію getUniqueValues(arr), яка повертає масив,
+//містить лише унікальні елементи arr.
+
+const words = ["HTML","CSS", "JS", "React", "JS", "CSS", "JS",
+"Node.js", "JS", "React", "CSS", "React", "HTML", "Node.js"];
+
+function getUniqueValues(arr) {
+  const arrNew = [];
+
+  for (const element of arr) {
+    if (!arrNew.includes(element)) {
+      arrNew.push(element);
+    }
+    
+  }
+  return arrNew
+
+}
+
+// console.log(getUniqueValues(words))

@@ -28,7 +28,7 @@ function findSmallerNumber2(numbers) {
   return result;
 }
 
-console.log(findSmallerNumber2(someArr));
+// console.log(findSmallerNumber2(someArr));
 
 //Напишіть функцію caclculateAverage()
 //яка приймає довільну кількість
@@ -54,4 +54,25 @@ function caclculateAverage(...args) {
   return total / count;
 }
 
-console.log(caclculateAverage(2, 6, 24, 7, 35, 24, "hello", 9, "world"));
+// console.log(caclculateAverage(2, 6, 24, 7, 35, 24, "hello", 9, "world"));
+
+
+//Напишіть функцію makeInvetedString(), яка замінює регістр кожного символу
+//У сторіччі на протилежний
+//Наприклад 'JavaScript' повинен повернути 'jAVAsCRIPT'
+
+function makeInvetedString(string) {
+  let strNew = ``
+  for (const str of string ) {
+    if (str === str.toUpperCase()) {
+        strNew += str.toLowerCase();
+    } else {
+      strNew += str.toUpperCase()
+    }
+    
+  }
+  return strNew;
+}
+
+console.log(makeInvetedString(`JavaScript`));
+console.log(makeInvetedString(`jAVAsCRIPT`))

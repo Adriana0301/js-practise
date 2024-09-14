@@ -29,3 +29,29 @@ function findSmallerNumber2(numbers) {
 }
 
 console.log(findSmallerNumber2(someArr));
+
+//Напишіть функцію caclculateAverage()
+//яка приймає довільну кількість
+//аргументів і повертає їхнє середнє значення.
+//Додати перевірку, що аргументи це числа.
+
+function caclculateAverage(...args) {
+  let total = 0;
+  let count = 0;
+
+  for (let i = 0; i < args.length; i++) {
+    console.log(typeof args[i] === "number");
+    if (typeof args[i] === "number") {
+      total += args[i];
+      count++;
+    }
+  }
+
+  if (count === 0) {
+    return "No valid numbers provided";
+  }
+
+  return total / count;
+}
+
+console.log(caclculateAverage(2, 6, 24, 7, 35, 24, "hello", 9, "world"));

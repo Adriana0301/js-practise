@@ -181,3 +181,43 @@ user.getInfo = function getInfo() {
 
 console.log(user.getInfo())
 
+// Потрібно написати функцію, яка приймає 2 параметри obj і key, яка буде перебирати об'єкт.
+// Якщо об'єкт має такий ключ - поверне true
+
+function haskey (obj, key){
+    return obj.hasOwnProperty(key);
+}
+
+const user2 = {
+    name: "John",
+    age: 30,
+    job: "developer"
+};
+
+console.log(haskey(user, "age"));
+console.log(haskey(user2, "salary"));
+
+//Напиши функцію findLongestWord(string)
+//яка приймає довільний рядок
+//що складається лише з розділених слів
+//пробілом (параметр string)
+//і повертає найдовше слово у цьому рядку
+
+// const string = "Nunc sed turpis a felis in nunc fringilla"
+
+function findLongestWord(string){
+    const words = string.split(" ");
+
+    let longestWord = words[0];
+
+    for( const word of words) {
+        if (word.length > longestWord.length){
+            longestWord = word;
+        }
+    }
+
+    return longestWord;
+}
+
+const string = "Nunc sed turpis a felis in nunc fringilla";
+console.log(findLongestWord(string));

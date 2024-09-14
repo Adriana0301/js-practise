@@ -136,4 +136,48 @@ const salaries = {
   Ajax: 1470,
 };
 
-console.log(sumSalaries(salaries));
+// console.log(sumSalaries(salaries));
+
+
+//Напишіть ф-цію calcTotalPrice(stones, stonesName),
+//яка приймає масив об'єктів і
+//Рядок з назвою каменю.
+//Функція повертає загальну вартість каменів
+//з ​таким ім'ям, ціною та кількістю з об'єкта
+
+const stones = [
+{ name: "Смарагд", price: 1300, quantity: 4 },
+{ name: "Діамант", price: 2700, quantity: 6 },
+{ name: "Сапфір", price: 400, quantity: 7},
+{ name: "Щебінь", price: 150, quantity: 100 },
+];
+
+function calcTotalPrice(stones, stonesName) {
+  for (const stone of stones) {
+    if (stone.name === stonesName) {
+      return stone.price * stone.quantity;
+    }
+  }
+}
+
+// console.log(calcTotalPrice(stones, "Смарагд"))
+
+// Додати метод getinfo в об'єкт user, який повертатиме інфу про користувача у форматі
+// Name: Peter. Surname: Parker. Age: 22. Position: spider-man.
+
+const user = {
+    name: 'Peter',
+    surname: 'Parker',
+    age: 22,
+    position: 'spider-man'
+}
+
+
+
+user.getInfo = function getInfo() {
+  return `Name: ${this.name}. Surname: ${this.surname}. Age: ${this.age}. Position: ${this.position}.`
+}
+
+
+console.log(user.getInfo())
+

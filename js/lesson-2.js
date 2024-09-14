@@ -56,20 +56,18 @@ function caclculateAverage(...args) {
 
 // console.log(caclculateAverage(2, 6, 24, 7, 35, 24, "hello", 9, "world"));
 
-
 //Напишіть функцію makeInvetedString(), яка замінює регістр кожного символу
 //У сторіччі на протилежний
 //Наприклад 'JavaScript' повинен повернути 'jAVAsCRIPT'
 
 function makeInvetedString(string) {
-  let strNew = ``
-  for (const str of string ) {
+  let strNew = ``;
+  for (const str of string) {
     if (str === str.toUpperCase()) {
-        strNew += str.toLowerCase();
+      strNew += str.toLowerCase();
     } else {
-      strNew += str.toUpperCase()
+      strNew += str.toUpperCase();
     }
-    
   }
   return strNew;
 }
@@ -80,8 +78,22 @@ function makeInvetedString(string) {
 //Напишіть функцію getUniqueValues(arr), яка повертає масив,
 //містить лише унікальні елементи arr.
 
-const words = ["HTML","CSS", "JS", "React", "JS", "CSS", "JS",
-"Node.js", "JS", "React", "CSS", "React", "HTML", "Node.js"];
+const words = [
+  "HTML",
+  "CSS",
+  "JS",
+  "React",
+  "JS",
+  "CSS",
+  "JS",
+  "Node.js",
+  "JS",
+  "React",
+  "CSS",
+  "React",
+  "HTML",
+  "Node.js",
+];
 
 function getUniqueValues(arr) {
   const arrNew = [];
@@ -90,10 +102,38 @@ function getUniqueValues(arr) {
     if (!arrNew.includes(element)) {
       arrNew.push(element);
     }
-    
   }
-  return arrNew
-
+  return arrNew;
 }
 
 // console.log(getUniqueValues(words))
+
+//У нас є об'єкт, у якому зберігатимуться зарплати
+//нашої команди
+//Напишіть код для сумування всіх зарплат і
+//збережіть його результат у змінній sum.
+//Якщо об'єкт salaries порожній, то результат має бути 0
+
+function sumSalaries(salaries) {
+  const salaryArray = Object.values(salaries);
+
+  if (salaryArray.length === 0) {
+    return 0;
+  }
+
+  let sum = 0;
+
+  for (const salary of salaryArray) {
+    sum += salary;
+  }
+
+  return sum;
+}
+
+const salaries = {
+  Mango: 100,
+  Poly: 160,
+  Ajax: 1470,
+};
+
+console.log(sumSalaries(salaries));

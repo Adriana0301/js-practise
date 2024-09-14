@@ -13,6 +13,9 @@ function findSmallerNumber(numbers) {
   return smallest;
 }
 
+// const numbers = [ 5, 35, 56, 12, 24, 7, 80, 3];
+// console.log(findSmallerNumber(numbers));
+
 // напиши функцію яка сумуватиме сусідні числа і пушити в новий масив
 const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
 
